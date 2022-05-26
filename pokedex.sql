@@ -430,7 +430,7 @@ INSERT INTO "type" ("id", "name", "color") VALUES
 (2, 'Combat', 'bb5544'),
 (3, 'Dragon', '7766ee'),
 (4, 'Eau', '3399ff'),
-(5, 'Électrik', 'ffbb33'),
+(5, 'Electrik', 'ffbb33'),
 (6, 'Feu', 'ff4422'),
 (7, 'Glace', '77ddff'),
 (8, 'Insecte', 'aabb22'),
@@ -441,5 +441,5 @@ INSERT INTO "type" ("id", "name", "color") VALUES
 (13, 'Roche', 'bbaa66'),
 (14, 'Sol', 'ddbb55'),
 (15, 'Spectre', '6666bb'),
-(16, 'Ténèbres', '665544'),
+(16, 'Tenebres', '665544'),
 (17, 'Vol', '6699ff');
