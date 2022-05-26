@@ -1,0 +1,13 @@
+<%- include('./partials/header')%>
+      <main>
+        <h1 class="types_title">Click a type to see all the Pokemons of the same type</h1>
+        <div class="type_card_container">
+            <% for (const type of types) { %>
+                <card class="type_card" style="background-color: #<%= type.color %>;">
+                    <a href="/pokemon/type/<%= type.name %>">
+                        <p class="type_name"><%= type.name %></p>
+                    </a>
+                </card>
+            <% } %>
+            </div>
+<%- include('./partials/footer')%>

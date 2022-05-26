@@ -1,0 +1,74 @@
+<%- include('./partials/header')%>
+        <h1 class="details-title"> Details of <%= pokemon.nom %></h1>
+        <div class="details-container"> 
+            <div class="details-image">
+                <img src="/img/<%= pokemon.numero %>.png" alt="<%= pokemon.numero %>">
+            </div>
+            <div class="details">
+                <h2 class="details-subtitle"> #<%= pokemon.numero %> <%= pokemon.nom %></h2>
+                <% for (const type of pokemon.types) { %>
+                    <!-- <em class="type" style="background-color: #<%=type.color %>"> <%= type.name %></em> -->
+                    <a href="/pokemon/type/<%= type.name %>">
+                        <em class="type" style="background-color: #<%=type.color %>"> <%= type.name %></em>
+                    </a>
+                <% } %>
+                <h3 class="statistics-title">Statistique</h3>
+                
+                <div class="stat_row">
+                    <div class="stat_name">PV</div>
+                    <div class="stat"><%= pokemon.pv %></div>
+                    <div class="progress_bar">
+                        <div class="progress_bar_color_one" style="width: <%= pokemon.pv %>%"></div>
+                        <div class="progress_bar_color_two" style="width: <%= 300 - pokemon.pv %>%"></div>
+                    </div>
+                </div>
+
+                <div class="stat_row">
+                    <div class="stat_name">Attaque</div>
+                    <div class="stat"><%= pokemon.attaque %></div>
+                    <div class="progress_bar">
+                        <div class="progress_bar_color_one" style="width: <%= pokemon.attaque %>%"></div>
+                        <div class="progress_bar_color_two" style="width: <%= 300 - pokemon.attaque %>%"></div>
+                    </div>
+                </div>
+
+                <div class="stat_row">
+                    <div class="stat_name">Défense</div>
+                    <div class="stat"><%= pokemon.defense %></div>
+                    <div class="progress_bar">
+                        <div class="progress_bar_color_one" style="width: <%= pokemon.defense %>%"></div>
+                        <div class="progress_bar_color_two" style="width: <%= 300 - pokemon.defense %>%"></div>
+                    </div>
+                </div>
+
+                <div class="stat_row">
+                    <div class="stat_name">Attaque spé</div>
+                    <div class="stat"><%= pokemon.attaque_spe %></div>
+                    <div class="progress_bar">
+                        <div class="progress_bar_color_one" style="width: <%= pokemon.attaque_spe %>%"></div>
+                        <div class="progress_bar_color_two" style="width: <%= 300 - pokemon.attaque_spe %>%"></div>
+                    </div>
+                </div>
+
+                <div class="stat_row">
+                    <div class="stat_name">Défense spé</div>
+                    <div class="stat"><%= pokemon.defense_spe %></div>
+                    <div class="progress_bar">
+                        <div class="progress_bar_color_one" style="width: <%= pokemon.defense_spe %>%"></div>
+                        <div class="progress_bar_color_two" style="width: <%= 300 - pokemon.defense_spe %>%"></div>
+                    </div>
+                </div>
+
+                <div class="stat_row">
+                    <div class="stat_name">Vitesse</div>
+                    <div class="stat"><%= pokemon.vitesse %></div>
+                    <div class="progress_bar">
+                        <div class="progress_bar_color_one" style="width: <%= pokemon.vitesse %>%"></div>
+                        <div class="progress_bar_color_two" style="width: <%= 300 - pokemon.vitesse %>%"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+            <a href="/" class="go_back">Go back to the liste </a>
+<%- include('./partials/footer')%>
