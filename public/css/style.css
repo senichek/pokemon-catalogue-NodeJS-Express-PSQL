@@ -53,6 +53,11 @@ a:active {
   border-radius: 25px;
 }
 
+.card img {
+  height: auto;
+  width: 100%;
+}
+
 .pokemon_name {
   font-size: 1.5rem;
   color: #edced3;
@@ -319,5 +324,44 @@ a:active {
       margin-top: 3rem;
       border-bottom: 1px solid #d1cfcf;
       margin-bottom: 4rem;
+  }
+
+  .details-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .details {
+    width: 80%;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 500px) {
+
+  .intro__header {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .details-image img {
+    height: auto;
+    width: 80%; 
+  }
+}
+
+@media screen and (max-width: 350px) {
+
+  .intro__header {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .header {
+    font-size: 1rem;
+  }
+
+  .details em {
+    display: inline-block;
   }
 }
